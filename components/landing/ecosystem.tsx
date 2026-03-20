@@ -1,47 +1,41 @@
-import { Server, Stethoscope, Store, FolderOpen, CheckCircle } from "lucide-react";
+import { Stethoscope, MessageCircle, Mic, CheckCircle } from "lucide-react";
 
 const products = [
-  {
-    label: "Infraestructura",
-    labelColor: "text-muted-foreground",
-    icon: <Server className="w-5 h-5" />,
-    title: "Agent OS",
-    description:
-      "Plataforma full-stack para construir, desplegar y gestionar agentes de IA a escala. Control plane unificado.",
-    tags: ["GCP", "Python", "Docker"],
-  },
   {
     label: "HealthTech",
     labelColor: "text-emerald-600 dark:text-emerald-400",
     icon: <Stethoscope className="w-5 h-5" />,
-    title: "Doci",
+    title: "Docflow",
     description:
-      "Sistema de Historia Clínica Electrónica (EHR) con transcripción de voz por IA para el mercado latinoamericano.",
-    tags: ["Whisper", "React"],
+      "Sistema de Historia Clinica Electronica (EHR) con transcripcion de voz por IA. Digitaliza el flujo documental de clinicas en Latinoamerica.",
+    tags: ["EHR", "Whisper", "PostgreSQL", "pgvector"],
+    href: "/docflow",
   },
   {
-    label: "Marketplace",
-    labelColor: "text-blue-600 dark:text-blue-400",
-    icon: <Store className="w-5 h-5" />,
-    title: "Todi",
+    label: "SaaS",
+    labelColor: "text-green-600 dark:text-green-400",
+    icon: <MessageCircle className="w-5 h-5" />,
+    title: "Whabi",
     description:
-      "Marketplace impulsado por IA que conecta consumidores con proveedores vía WhatsApp. Búsqueda semántica.",
-    tags: ["Pgvector", "WhatsApp API"],
+      "CRM para WhatsApp Business con automatizacion de conversaciones, seguimiento de leads y gestion de documentos.",
+    tags: ["WhatsApp API", "CRM", "Redis", "MinIO"],
+    href: "/whabi",
   },
   {
-    label: "Directory",
-    labelColor: "text-amber-600 dark:text-amber-400",
-    icon: <FolderOpen className="w-5 h-5" />,
-    title: "LatamVault",
+    label: "Voice-First",
+    labelColor: "text-purple-600 dark:text-purple-400",
+    icon: <Mic className="w-5 h-5" />,
+    title: "Aurora",
     description:
-      "Directorio comercial semántico para la web agéntica. Descubrimiento vía protocolos MCP.",
-    tags: ["MCP", "A2A Protocol"],
+      "PWA voice-first para negocios. Interfaz conversacional con IA que prioriza la voz sobre el texto.",
+    tags: ["Nuxt 3", "Clerk", "Groq Whisper", "PWA"],
+    href: "/aurora",
   },
 ];
 
 export function LandingEcosystem() {
   return (
-    <section className="sm:p-8 bg-muted/50 border border-border rounded-3xl pt-8 pb-8 px-6">
+    <section id="productos" className="sm:p-8 bg-muted/50 border border-border rounded-3xl pt-8 pb-8 px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left */}
         <div className="flex flex-col justify-between h-full">
@@ -50,31 +44,34 @@ export function LandingEcosystem() {
               Ecosistema
             </span>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-foreground tracking-tighter mt-3 leading-[1]">
-              Nuestros productos y plataformas activas.
+              Tres productos. Un ecosistema.
             </h2>
             <div className="mt-8 flex flex-col gap-6">
               <p className="text-base text-muted-foreground font-normal leading-relaxed max-w-md">
-                Desplegamos soluciones que combinan lo mejor de la ingeniería de
-                software tradicional con las capacidades emergentes de los
-                modelos de lenguaje.
+                Software de inteligencia artificial para salud digital,
+                comunicacion empresarial y aplicaciones voice-first en
+                Latinoamerica.
               </p>
               <div>
-                <button className="inline-flex items-center gap-2 h-10 px-5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition">
-                  Ver todo
-                </button>
+                <a
+                  href="#productos"
+                  className="inline-flex items-center gap-2 h-10 px-5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition"
+                >
+                  Conocer mas
+                </a>
               </div>
             </div>
           </div>
           <div className="mt-auto pt-10 hidden lg:block">
             <div className="flex items-center gap-4 text-xs text-muted-foreground font-medium uppercase tracking-wider">
               <span className="flex items-center gap-1">
-                <CheckCircle className="w-3 h-3" /> Scalable
+                <CheckCircle className="w-3 h-3" /> Escalable
               </span>
               <span className="flex items-center gap-1">
-                <CheckCircle className="w-3 h-3" /> Secure
+                <CheckCircle className="w-3 h-3" /> Seguro
               </span>
               <span className="flex items-center gap-1">
-                <CheckCircle className="w-3 h-3" /> Intelligent
+                <CheckCircle className="w-3 h-3" /> Inteligente
               </span>
             </div>
           </div>
@@ -83,8 +80,9 @@ export function LandingEcosystem() {
         {/* Right: Product Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {products.map((product) => (
-            <article
+            <a
               key={product.title}
+              href={product.href}
               className="group relative flex flex-col bg-card border border-border rounded-2xl p-5 hover:border-muted-foreground/30 transition-all h-[240px]"
             >
               <div className="flex justify-between items-start mb-2">
@@ -113,7 +111,7 @@ export function LandingEcosystem() {
                   </span>
                 ))}
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>
