@@ -9,7 +9,7 @@ const products = [
     description:
       "Sistema de Historia Clinica Electronica (EHR) con transcripcion de voz por IA. Digitaliza el flujo documental de clinicas en Latinoamerica.",
     tags: ["EHR", "Whisper", "PostgreSQL", "pgvector"],
-    href: "/docflow",
+    href: "https://docflow.aikalabs.cc",
   },
   {
     label: "SaaS",
@@ -19,7 +19,7 @@ const products = [
     description:
       "CRM para WhatsApp Business con automatizacion de conversaciones, seguimiento de leads y gestion de documentos.",
     tags: ["WhatsApp API", "CRM", "Redis", "MinIO"],
-    href: "/whabi",
+    href: "https://whabi.aikalabs.cc",
   },
   {
     label: "Voice-First",
@@ -29,7 +29,7 @@ const products = [
     description:
       "PWA voice-first para negocios. Interfaz conversacional con IA que prioriza la voz sobre el texto.",
     tags: ["Nuxt 3", "Clerk", "Groq Whisper", "PWA"],
-    href: "/aurora",
+    href: "https://aurora.aikalabs.cc",
   },
 ];
 
