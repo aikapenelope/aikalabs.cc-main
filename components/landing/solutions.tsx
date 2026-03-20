@@ -1,63 +1,48 @@
-import {
-  MessageCircle,
-  Building2,
-  ShieldCheck,
-  Dumbbell,
-  Sparkles,
-} from "lucide-react";
+import { Stethoscope, MessageCircle, Mic, Sparkles } from "lucide-react";
 
 const solutions = [
   {
+    label: "HealthTech",
+    labelColor: "text-emerald-400 bg-emerald-400/10",
+    icon: <Stethoscope className="w-6 h-6 text-zinc-400" />,
+    title: "Docflow",
+    description:
+      "Historia Clinica Electronica para clinicas en Latinoamerica. Digitaliza documentos, transcribe consultas con IA, y cumple regulaciones de salud.",
+    tags: ["EHR", "Whisper AI", "HIPAA-aware"],
+  },
+  {
     label: "SaaS",
-    labelColor: "text-indigo-400 bg-indigo-400/10",
+    labelColor: "text-green-400 bg-green-400/10",
     icon: <MessageCircle className="w-6 h-6 text-zinc-400" />,
-    title: "Chati",
+    title: "Whabi",
     description:
-      "Plataforma SaaS multi-tenant para automatización de WhatsApp con IA, CRM y gestión de calendario.",
-    tags: ["Multi-tenant", "RAG"],
+      "CRM para WhatsApp Business. Automatiza conversaciones, gestiona leads, y centraliza documentos de clientes en un solo lugar.",
+    tags: ["WhatsApp API", "CRM", "Automatizacion"],
   },
   {
-    label: "PropTech",
-    labelColor: "text-cyan-400 bg-cyan-400/10",
-    icon: <Building2 className="w-6 h-6 text-zinc-400" />,
-    title: "PropAI",
+    label: "Voice-First",
+    labelColor: "text-purple-400 bg-purple-400/10",
+    icon: <Mic className="w-6 h-6 text-zinc-400" />,
+    title: "Aurora",
     description:
-      "Plataforma inmobiliaria con IA para Venezuela. Búsqueda conversacional y analytics para agentes.",
-    tags: ["GPT-4o", "Analytics"],
-  },
-  {
-    label: "InsurTech",
-    labelColor: "text-rose-400 bg-rose-400/10",
-    icon: <ShieldCheck className="w-6 h-6 text-zinc-400" />,
-    title: "Insurespond",
-    description:
-      "CRM multi-tenant especializado para agencias de seguros. Automatización de pólizas y seguimiento.",
-    tags: ["CRM", "Auto"],
-  },
-  {
-    label: "SportsTech",
-    labelColor: "text-orange-400 bg-orange-400/10",
-    icon: <Dumbbell className="w-6 h-6 text-zinc-400" />,
-    title: "Project Titan",
-    description:
-      "Sistema de inteligencia deportiva con simulaciones automatizadas para MLB, NBA y ligas europeas.",
-    tags: ["Data", "AI Sim"],
+      "PWA voice-first para negocios. Interfaz conversacional con IA que prioriza la voz sobre el texto. Sin instalacion, funciona offline.",
+    tags: ["PWA", "Nuxt 3", "Groq Whisper"],
   },
 ];
 
 export function LandingSolutions() {
   return (
-    <section className="sm:p-8 bg-zinc-900 border-zinc-800 border rounded-3xl pt-8 pb-8 px-6 text-white overflow-hidden relative">
+    <section id="soluciones" className="sm:p-8 bg-zinc-900 border-zinc-800 border rounded-3xl pt-8 pb-8 px-6 text-white overflow-hidden relative">
       <div className="mb-10 max-w-2xl">
         <div className="flex items-center gap-2 text-sm text-zinc-400 mb-2">
           <Sparkles className="w-4 h-4" />
-          <span className="font-medium">Soluciones Especializadas</span>
+          <span className="font-medium">Soluciones</span>
         </div>
         <h2 className="text-4xl sm:text-6xl font-medium tracking-tight text-white leading-[1]">
-          Verticales &amp; Plataformas.
+          Software que resuelve problemas reales.
         </h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {solutions.map((sol) => (
           <article
             key={sol.title}

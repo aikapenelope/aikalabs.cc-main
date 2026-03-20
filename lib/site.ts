@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: "Humano y Agéntico",
-  url: "https://aika-main-angel-delns-projects.vercel.app",
+  name: "Aika Labs",
+  url: "https://aikalabs.cc",
   description:
-    "Desarrollo de software humano y agéntico. Sistemas de inteligencia artificial y plataformas de grado mundial.",
+    "Software de inteligencia artificial para salud digital, WhatsApp Business y aplicaciones voice-first en Latinoamerica. Creadores de Whabi, Docflow y Aurora.",
 };
 
 export type SiteConfig = typeof siteConfig;

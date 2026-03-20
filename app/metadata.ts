@@ -2,18 +2,21 @@ import { siteConfig } from "@/lib/site";
 import type { Metadata } from "next";
 
 export const metadataKeywords = [
-  "Blog",
-  "IA",
-  "Inteligencia Artificial",
-  "Agentes IA",
-  "Desarrollo de Software",
-  "SaaS",
-  "WhatsApp Automation",
-  "RAG",
-  "LLM",
-  "Next.js",
-  "React",
-  "Humano y Agéntico",
+  "Aika Labs",
+  "Whabi",
+  "Docflow",
+  "Aurora",
+  "EHR Latinoamerica",
+  "Historia Clinica Electronica",
+  "WhatsApp Business CRM",
+  "CRM WhatsApp",
+  "Salud Digital",
+  "Voice-first PWA",
+  "Software Clinicas",
+  "Automatizacion WhatsApp",
+  "SaaS Salud",
+  "Inteligencia Artificial Salud",
+  "IA Latinoamerica",
 ];
 
 export const metadata: Metadata = {
@@ -22,11 +25,11 @@ export const metadata: Metadata = {
   keywords: metadataKeywords,
   authors: [
     {
-      name: "Humano y Agéntico",
+      name: "Aika Labs",
       url: siteConfig.url,
     },
   ],
-  creator: "Humano y Agéntico",
+  creator: "Aika Labs",
   openGraph: {
     type: "website",
     locale: "es_LA",
