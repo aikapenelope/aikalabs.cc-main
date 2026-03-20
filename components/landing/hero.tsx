@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+
 export function LandingHero() {
   return (
     <section className="relative overflow-hidden h-[65vh] sm:h-[70vh] bg-zinc-900 border-zinc-800 border rounded-3xl group shadow-2xl">
@@ -37,12 +39,12 @@ export function LandingHero() {
             >
               Ver Productos
             </a>
-            <a
+            <Link
               href="/blog"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-black/40 backdrop-blur-md text-white border border-white/10 text-sm font-medium hover:bg-black/60 transition"
             >
               Blog
-            </a>
+            </Link>
           </div>
         </div>
       </div>
