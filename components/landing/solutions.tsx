@@ -1,4 +1,10 @@
-import { Stethoscope, MessageCircle, Mic, Sparkles } from "lucide-react";
+import {
+  Stethoscope,
+  MessageCircle,
+  Mic,
+  Cloud,
+  Sparkles,
+} from "lucide-react";
 
 const solutions = [
   {
@@ -28,6 +34,15 @@ const solutions = [
       "PWA voice-first para negocios. Interfaz conversacional con IA que prioriza la voz sobre el texto. Sin instalacion, funciona offline.",
     tags: ["PWA", "Nuxt 3", "Groq Whisper"],
   },
+  {
+    label: "Enterprise",
+    labelColor: "text-orange-400 bg-orange-400/10",
+    icon: <Cloud className="w-6 h-6 text-zinc-400" />,
+    title: "CloudVZ",
+    description:
+      "Plataforma de migracion empresarial para Venezuela. Reemplaza software pirata con infraestructura open-source self-hosted, legal y AI-ready en 4-8 semanas.",
+    tags: ["Migracion", "Open Source", "Self-Hosted", "Venezuela"],
+  },
 ];
 
 export function LandingSolutions() {
@@ -42,7 +57,7 @@ export function LandingSolutions() {
           Software que resuelve problemas reales.
         </h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {solutions.map((sol) => (
           <article
             key={sol.title}

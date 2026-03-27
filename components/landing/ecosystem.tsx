@@ -1,4 +1,10 @@
-import { Stethoscope, MessageCircle, Mic, CheckCircle } from "lucide-react";
+import {
+  Stethoscope,
+  MessageCircle,
+  Mic,
+  Cloud,
+  CheckCircle,
+} from "lucide-react";
 
 const products = [
   {
@@ -31,6 +37,16 @@ const products = [
     tags: ["Nuxt 3", "Clerk", "Groq Whisper", "PWA"],
     href: "https://aurora.aikalabs.cc",
   },
+  {
+    label: "Enterprise",
+    labelColor: "text-orange-600 dark:text-orange-400",
+    icon: <Cloud className="w-5 h-5" />,
+    title: "CloudVZ",
+    description:
+      "Plataforma de migracion empresarial. Reemplaza software pirata con +30 herramientas open-source self-hosted, legales y AI-ready.",
+    tags: ["Migracion", "Open Source", "Self-Hosted", "B2B"],
+    href: "https://cloudvz.aikalabs.cc",
+  },
 ];
 
 export function LandingEcosystem() {
@@ -44,13 +60,13 @@ export function LandingEcosystem() {
               Ecosistema
             </span>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium text-foreground tracking-tighter mt-3 leading-[1]">
-              Tres productos. Un ecosistema.
+              Cuatro productos. Un ecosistema.
             </h2>
             <div className="mt-8 flex flex-col gap-6">
               <p className="text-base text-muted-foreground font-normal leading-relaxed max-w-md">
                 Software de inteligencia artificial para salud digital,
-                comunicacion empresarial y aplicaciones voice-first en
-                Latinoamerica.
+                comunicacion empresarial, aplicaciones voice-first y migracion
+                enterprise en Latinoamerica.
               </p>
               <div>
                 <a
