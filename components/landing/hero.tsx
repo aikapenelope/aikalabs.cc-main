@@ -17,7 +17,7 @@ export function LandingHero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400" />
             </span>
-            Whabi &middot; Docflow &middot; Aurora
+            Whabi &middot; Docflow &middot; Aurora &middot; CloudVZ
           </div>
 
           <h1 className="sm:text-7xl lg:text-8xl leading-[0.95] text-balance text-5xl font-medium tracking-tighter pb-2">

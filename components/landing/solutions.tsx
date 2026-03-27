@@ -1,4 +1,10 @@
-import { Stethoscope, MessageCircle, Mic, Sparkles } from "lucide-react";
+import {
+  Stethoscope,
+  MessageCircle,
+  Mic,
+  Cloud,
+  Sparkles,
+} from "lucide-react";
 
 const solutions = [
   {
@@ -9,6 +15,7 @@ const solutions = [
     description:
       "Historia Clinica Electronica para clinicas en Latinoamerica. Digitaliza documentos, transcribe consultas con IA, y cumple regulaciones de salud.",
     tags: ["EHR", "Whisper AI", "HIPAA-aware"],
+    href: "https://docflow.aikalabs.cc",
   },
   {
     label: "SaaS",
@@ -27,6 +34,17 @@ const solutions = [
     description:
       "PWA voice-first para negocios. Interfaz conversacional con IA que prioriza la voz sobre el texto. Sin instalacion, funciona offline.",
     tags: ["PWA", "Nuxt 3", "Groq Whisper"],
+    href: "https://aurora.aikalabs.cc",
+  },
+  {
+    label: "Enterprise",
+    labelColor: "text-orange-400 bg-orange-400/10",
+    icon: <Cloud className="w-6 h-6 text-zinc-400" />,
+    title: "CloudVZ",
+    description:
+      "Plataforma de migracion empresarial para Venezuela. Reemplaza software pirata con infraestructura open-source self-hosted, legal y AI-ready en 4-8 semanas.",
+    tags: ["Migracion", "Open Source", "Self-Hosted", "Venezuela"],
+    href: "https://cloudvz.aikalabs.cc",
   },
 ];
 
@@ -42,38 +60,56 @@ export function LandingSolutions() {
           Software que resuelve problemas reales.
         </h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {solutions.map((sol) => (
-          <article
-            key={sol.title}
-            className="bg-zinc-800/50 border border-zinc-700/50 rounded-2xl p-6 flex flex-col h-full hover:bg-zinc-800 transition-colors"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <span
-                className={`text-xs font-semibold px-2 py-1 rounded ${sol.labelColor}`}
-              >
-                {sol.label}
-              </span>
-              {sol.icon}
-            </div>
-            <h3 className="text-2xl font-medium tracking-tight text-white mb-2">
-              {sol.title}
-            </h3>
-            <p className="text-sm text-zinc-400 leading-relaxed mb-6">
-              {sol.description}
-            </p>
-            <div className="mt-auto flex flex-wrap gap-2">
-              {sol.tags.map((tag) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {solutions.map((sol) => {
+          const content = (
+            <>
+              <div className="flex items-center justify-between mb-4">
                 <span
-                  key={tag}
-                  className="text-[10px] border border-zinc-700 text-zinc-400 px-2 py-1 rounded-full"
+                  className={`text-xs font-semibold px-2 py-1 rounded ${sol.labelColor}`}
                 >
-                  {tag}
+                  {sol.label}
                 </span>
-              ))}
-            </div>
-          </article>
-        ))}
+                {sol.icon}
+              </div>
+              <h3 className="text-2xl font-medium tracking-tight text-white mb-2">
+                {sol.title}
+              </h3>
+              <p className="text-sm text-zinc-400 leading-relaxed mb-6">
+                {sol.description}
+              </p>
+              <div className="mt-auto flex flex-wrap gap-2">
+                {sol.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] border border-zinc-700 text-zinc-400 px-2 py-1 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </>
+          );
+
+          const className =
+            "bg-zinc-800/50 border border-zinc-700/50 rounded-2xl p-6 flex flex-col h-full hover:bg-zinc-800 transition-colors";
+
+          return "href" in sol && sol.href ? (
+            <a
+              key={sol.title}
+              href={sol.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={className}
+            >
+              {content}
+            </a>
+          ) : (
+            <article key={sol.title} className={className}>
+              {content}
+            </article>
+          );
+        })}
       </div>
     </section>
   );
